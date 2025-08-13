@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>DoctorSina</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+          <link href="https://www.doctorsina.io/frontend_assets/img/ds-ico2.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+<style>
+  /* Reset & base */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contain {
+  background-color: #f9fafb;
+  max-width: 1100px;
+  margin: 120px auto 80px;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.wrapper {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* FORM SECTION */
+.form {
+  flex: 1 1 500px;
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-title {
+  color: #8BBF9C;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+
+.form-headline {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #212d31;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.03em;
+}
+
+form p {
+  margin-bottom: 1.6rem;
+  position: relative;
+}
+
+.form-input,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #d6d6d6;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+  color: #212d31;
+  box-shadow: inset 0 2px 6px rgb(0 0 0 / 0.03);
+  resize: vertical;
+  font-weight: 400;
+}
+
+.form-input::placeholder,
+textarea::placeholder {
+  color: #8a8a8a;
+}
+
+.form-input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8BBF9C;
+  background: #fff;
+  box-shadow: 0 0 8px #8BBF9Caa;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 0.8rem;
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #343a40;
+  user-select: none;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+/* BUTTONS */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.submit-btn,
+.reset-btn {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 50px;
+  border: 2px solid #8BBF9C;
+  background-color: transparent;
+  color: #8BBF9C;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #8BBF9C;
+  color: #fff;
+  border-color: #6ea67a;
+  box-shadow: 0 0 15px #8BBF9C99;
+}
+
+.reset-btn {
+  border-color: #e0e0e0;
+  color: #777;
+}
+
+.reset-btn:hover,
+.reset-btn:focus {
+  background-color: #eee;
+  color: #333;
+  border-color: #ccc;
+}
+
+/* CONTACTS ASIDE */
+.contacts {
+  flex: 1 1 400px;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.map-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #212d31;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-info-list li i {
+  color: #8BBF9C;
+  margin-right: 10px;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #212d31;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: #8BBF9C;
+  outline: none;
+}
+
+/* SOCIAL MEDIA */
+.social-media-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.4rem;
+  justify-content: start;
+}
+
+.social-link {
+  font-size: 1.4rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8BBF9C;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(139, 191, 156, 0.6);
+  user-select: none;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #6ea67a;
+  transform: scale(1.1);
+  color: #fff;
+  outline: none;
+}
+
+.social-link.facebook {
+  background-color: #3b5998;
+}
+
+.social-link.twitter {
+  background-color: #1da1f2;
+}
+
+.social-link.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .form,
+  .contacts {
+    flex: 1 1 100%;
+  }
+
+  .contain {
+    margin: 60px 1rem 40px;
+    padding: 1.5rem 1rem;
+  }
+}
+
+</style>
+<body>
+     <!-- Spinner Start -->
+     
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-c px-5 d-none d-lg-block">
+        <div class="row gx-0 align-items-center" style="height: 45px;">
+            <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                <div class="d-flex flex-wrap">
+                    <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>651N N Broad St, Middletown, DE 19709, États-Unis</a>
+                    <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>Call us now +1 (597) 373-2177</a>
+                    <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>contact@doctorsina.net</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-youtube"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+   <div class="container-fluid position-relative p-0">
+               <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 px-lg-5 py-3 py-lg-0 fixed-top">
+        <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+            <img src="img/logods.png" alt="DoctorSina Logo" style="width: 60px;">
+            <span class="ms-2 fs-4 fw-bold text-primary">DoctorSina</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars text-primary"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 gap-2 text-center text-lg-start">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="team.html" class="nav-item nav-link">Our Team</a>
+                <a href="partners.html" class="nav-item nav-link">Our Partners</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="privacy.html" class="nav-item nav-link">Privacy</a>
+                <a href="download.html" class="nav-item nav-link"><i class="fas fa-download me-1"></i>Download App</a>
+          <a href="#" class="btn btn-primary  text-white ms-lg-3 mt-3 mt-lg-0">Login</a> </div>
+            
+        </div>
+    </nav>
+
+
+
+            <!-- Carousel End -->
+        </div>
+    <!-- Navbar & Hero End -->
+<div class="contain">
+  <div class="wrapper">
+
+    <section class="form" aria-labelledby="contact-form-title">
+      <h4 ><img src="img/logods.png" alt="" height="120px"></h4>
+      <h2 id="contact-form-title" class="form-headline">Send us a message</h2>
+      <form id="submit-form" action="#" novalidate>
+        <p>
+          <label for="name" class="sr-only">Your Name*</label>
+          <input id="name" class="form-input" type="text" placeholder="Your Name*" required>
+          <small class="error-message"></small>
+        </p>
+        <p>
+          <label for="email" class="sr-only">Your Email*</label>
+          <input id="email" class="form-input" type="email" placeholder="Your Email*" required>
+          <small class="error-message"></small>
+        </p>
+        <p class="full-width">
+          <label for="company-name" class="sr-only">Company Name*</label>
+          <input id="company-name" class="form-input" type="text" placeholder="Company Name*" required>
+          <small class="error-message"></small>
+        </p>
+        <p class="full-width">
+          <label for="message" class="sr-only">Your Message*</label>
+          <textarea minlength="20" id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+          <small class="error-message"></small>
+        </p>
+        <p class="full-width checkbox-wrapper">
+          <input type="checkbox" id="checkbox" name="checkbox" checked>
+          <label for="checkbox" class="checkbox-label">Yes, I would like to receive communications by call/email about the company's services.</label>
+        </p>
+        <p class="full-width button-group">
+          <input type="submit" class="submit-btn" value="Submit">
+          <button type="reset" class="reset-btn">Reset</button>
+        </p>
+      </form>
+    </section>
+
+    <aside class="contacts" aria-label="Contact Information">
+      <div class="map-wrapper">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.5983082636444!2d-75.72000722456634!3d39.45581021356387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a079b7400001%3A0x38e556e41c6dc740!2s651N%20N%20Broad%20St%20Suite%20206%2C%20Middletown%2C%20DE%2019709%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2stn!4v1731409739740!5m2!1sfr!2stn" 
+          width="100%" 
+          height="300" 
+          style="border:0; border-radius: 12px;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Company Location Map"
+        ></iframe>
+      </div>
+      <ul class="contact-info-list">
+        <li aria-label="Email">
+          <i class="fa fa-envelope" aria-hidden="true" style="color: #8BBF9C;"></i>
+          <a href="mailto:contact@doctorsina.net" class="contact-link">contact@doctorsina.net</a>
+        </li>
+        <li aria-label="Phone">
+          <i class="fa fa-phone" aria-hidden="true" style="color: #8BBF9C;"></i>
+          <a href="tel:+15973732177" class="contact-link">+1 (597) 373-2177</a>
+        </li>
+      </ul>
+      <ul class="social-media-list" aria-label="Social Media Links">
+        <li>
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer" class="social-link twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+  </div>
+</div>
+
+
+   <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            
+            <!-- Brand & Social -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                   <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Quick Links</h4>
+                    <a href="service.html"><i class="fas fa-angle-right me-2"></i>  Our Services</a>
+
+                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                    <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                    <a href="privacy.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                    <a href="features.html"><i class="fas fa-angle-right me-2"></i> Our Features</a>
+
+                    <a href="download.html"><i class="fas fa-angle-right me-2"></i> Download Our App</a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Quick Links</h4>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Our Partners</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Download Our App</a>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Contact Info</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> 651N St Broad, Suite 206, Middletown, Delaware, 19709, USA</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> contact@doctorsina.net</p>
+                    <p><i class="fas fa-phone me-2"></i> +1 (597) 373-2177</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer CSS -->
+
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#" style="color: #8BBF9C"><i class="fas fa-copyright text-light me-2"></i>DoctorSina</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom" href="https://www.linkedin.com/in/taha-h-b-8a67672a6/"  style="color: #8BBF9C">Doctorsina dev team</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+<script>
+    new WOW().init();
+</script>
+<!-- Copyright End -->
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up" ></i></a>   
+
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<script>
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        e.target.elements.name.value = '';
+        e.target.elements.email.value = '';
+        e.target.elements.message.value = '';
+      });
+    
+</script>  
+  <script>
+    const nameEl = document.querySelector("#name");
+const emailEl = document.querySelector("#email");
+const companyNameEl = document.querySelector("#company-name");
+const messageEl = document.querySelector("#message");
+
+const form = document.querySelector("#submit-form");
+
+function checkValidations() {
+  let letters = /^[a-zA-Z\s]*$/;
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  const companyName = companyNameEl.value.trim();
+  const message = messageEl.value.trim();
+  if (name === "") {
+     document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please fill out this field!";
+  } else {
+    if (!letters.test(name)) {
+      document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please enter only characters!";
+    } else {
+      
+    }
+  }
+  if (email === "") {
+     document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please fill out this field!";
+  } else {
+    if (!letters.test(name)) {
+      document.querySelector(".name-error").classList.add("error");
+      document.querySelector(".name-error").innerText =
+        "Please enter only characters!";
+    } else {
+      
+    }
+  }
+}
+
+function reset() {
+  nameEl = "";
+  emailEl = "";
+  companyNameEl = "";
+  messageEl = "";
+  document.querySelector(".name-error").innerText = "";
+}
+
+  </script>
+</body>
+</html>

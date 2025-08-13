@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>DoctorSina</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+          <link href="https://www.doctorsina.io/frontend_assets/img/ds-ico2.ico" rel="icon">
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+<style>
+    /* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #0077cc;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: #0E2517;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    color: #8BBF9C
+    ;
+  }
+  
+  .about-us {
+    margin-top:350px ;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 163px auto;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p, ul li {
+      font-size: 1rem;
+    }
+  }
+  
+</style>
+    <body>
+ 
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-c px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center" style="height: 45px;">
+                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex flex-wrap">
+                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>651N N Broad St, Middletown, DE 19709, États-Unis</a>
+                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>Call us now +1 (597) 373-2177</a>
+                        <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>contact@doctorsina.net</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-youtube"></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+     <div class="container-fluid position-relative p-0">
+                 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-3 px-lg-5 py-3 py-lg-0 fixed-top">
+        <a href="index.html" class="navbar-brand d-flex align-items-center p-0">
+            <img src="img/logods.png" alt="DoctorSina Logo" style="width: 60px;">
+            <span class="ms-2 fs-4 fw-bold text-primary">DoctorSina</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars text-primary"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 gap-2 text-center text-lg-start">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="team.html" class="nav-item nav-link">Our Team</a>
+                <a href="partners.html" class="nav-item nav-link">Our Partners</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="privacy.html" class="nav-item nav-link">Privacy</a>
+                <a href="download.html" class="nav-item nav-link"><i class="fas fa-download me-1"></i>Download App</a>
+    <a href="#" class="btn btn-primary  text-white ms-lg-3 mt-3 mt-lg-0">Login</a></div>
+            
+        </div>
+    </nav>
+
+
+
+            <!-- Carousel End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+ <section class="about-us">
+    <div class="container">
+        <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="sub-style">
+                <h1 class="sub-title px-3 mb-0">Privacy && Policy</h1>
+            </div>
+          
+        </div>
+      <p>
+      
+At <strong>DoctorSina©</strong>, accessible from www.doctorsina.net, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by DoctorSina© and how we use it.
+
+If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
+
+This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in DoctorSina©..
+      </p>
+
+      <h2><strong>|</strong> Consent</h2>
+    <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.    </p>
+
+      <h2><strong>|</strong> Information we collect</h2>
+      <p>
+        The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.
+      </p>
+
+      <p>
+        If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.
+      </p>
+      <p>
+        When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.
+
+    </p>
+    <h2><strong>|</strong> How we use your information</h2>
+    <p>We use the information we collect in various ways, including to:</p>
+    <ul>
+        <li>Provide, operate, and maintain our webste
+        </li>
+        <li>
+            Improve, personalize, and expand our webste
+        </li>
+        <li>
+            Understand and analyze how you use our webste
+
+        </li>
+        <li>
+            Develop new products, services, features, and functionality
+        </li>
+        <li>
+            Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the webste, and for marketing and promotional purposes
+
+        </li>
+        <li>
+            Send you emails
+
+        </li>
+        <li>
+            Find and prevent fraud
+        </li>
+    </ul>
+    <h2><strong>|</strong> Log File</h2>
+    <p><strong>DoctorSina©</strong> follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+    <h2><strong>|</strong> Cookies and Web Beacons</h2>
+    <p>
+        
+Like any other website, <strong>DoctorSina©</strong> uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+    </p>
+    <p>
+        For more general information on cookies, please read <strong>"What Are Cookies"</strong> from Cookie Consent.
+
+
+    </p>
+    <h2><strong>|</strong> Google DoubleClick DART Cookie
+    </h2>
+<p>
+    Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL
+    
+</p>
+<p style="color: #778C7B;"><a href="">– https://policies.google.com/technologies/ads</a></p> 
+<h2><strong>|</strong> Our Advertising Partners
+</h2>
+<p>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
+<li>
+    Google
+</li>
+<p><a href="">
+    https://policies.google.com/technologies/ads
+</a></p>
+<h2><strong>|</strong> Advertising Partners Privacy Policies
+</h2>
+<p>You may consult this list to find the Privacy Policy for each of the advertising partners of <strong> DoctorSina©</strong>.
+
+</p>
+<p>
+    Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on DoctorSina©, which are sent directly to users' browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.
+</p>
+<p>
+    Note that DoctorSina© has no access to or control over these cookies that are used by third-party advertisers.
+</p>
+<h2><strong>|</strong> Third Party Privacy Policies
+</h2>
+<p><strong>DoctorSina©'s </strong>Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+<p>
+    You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.
+</p>
+<h2><strong>|</strong> CCPA Privacy Rights (Do Not Sell My Personal Information)
+</h2>
+<p>
+    Under the CCPA among tother rights, consumers have the right to:
+</p>
+<p>
+    Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.
+</p>
+<p>
+    Request that a business delete any personal data about the consumer that a business has collected.
+</p>
+<p>
+    Request that a business that sells a consumer's personal data, not sell the consumer's personal data.
+</p>
+<p>
+    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+</p>
+<h2><strong>|</strong> GDPR Data Protection Rights</h2>
+<p>
+    We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:
+</p>
+<p>
+    The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.
+</p>
+<p>
+    The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.
+</p>
+<p>
+    The right to erasure – You have the right to request that we erase your personal data, under certain conditions.
+</p>
+<p>
+    The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.
+</p>
+<p>
+    The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.
+</p>
+<p>
+    The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.
+</p>
+<p>
+    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+
+</p>
+<h2><strong>|</strong> Children's Information</h2>
+<p>
+    Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
+</p>
+<p>
+    <strong>DoctorSina©</strong> does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+</p>
+</div>
+  </section>
+        
+        <!-- Services End -->
+
+
+     
+        <!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            
+            <!-- Brand & Social -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                  <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Quick Links</h4>
+                    <a href="service.html"><i class="fas fa-angle-right me-2"></i>  Our Services</a>
+
+                    <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                    <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                    <a href="privacy.html"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                    <a href="features.html"><i class="fas fa-angle-right me-2"></i> Our Features</a>
+
+                    <a href="download.html"><i class="fas fa-angle-right me-2"></i> Download Our App</a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Quick Links</h4>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Our Partners</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                    <a href="#"><i class="fas fa-angle-right me-2"></i> Download Our App</a>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="footer-item d-flex flex-column">
+                    <h4 class="fw-bold text-white mb-3">Contact Info</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> 651N St Broad, Suite 206, Middletown, Delaware, 19709, USA</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> contact@doctorsina.net</p>
+                    <p><i class="fas fa-phone me-2"></i> +1 (597) 373-2177</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer CSS -->
+
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#" style="color: #8BBF9C"><i class="fas fa-copyright text-light me-2"></i>DoctorSina</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom" href="https://www.linkedin.com/in/taha-h-b-8a67672a6/"  style="color: #8BBF9C">Doctorsina dev team</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up" ></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        
+    </body>
+
+</html>
